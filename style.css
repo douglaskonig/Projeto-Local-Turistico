@@ -1,31 +1,35 @@
+/* RESET UNIVERSAL: Limpa as margens e paddings padrões do navegador e corrige o cálculo de tamanho das caixas */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* VARIÁVEIS E CONFIGURAÇÕES GLOBAIS: Define a fonte principal e padrões que serão herdados por todo o site */
 :root {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
   font-variation-settings:
-  "wdth" 100;
 }
 
+/* ESTILOS DA PÁGINA (FUNDO): Define a cor de fundo do navegador e zera margens externas do documento */
 body {
   background-color: #F5F4F0;
   margin: 0;
 }
 
+/* ESPACAMENTOS GERAIS DA PAGINA*/
 #page {
   box-sizing: border-box;
   width: 1120px;
-  padding: 0px 80px 48px;
-  margin: 88px auto ;
+  padding: 0px 80px 0px;
+  margin: 88px auto 48px;
   display: flow-root;
 }
 
+/* ESTILOS DO SUBSTITULO "SUA PROXIMA VIAGEM"*/
 .subtitulo {
   display: block;
   color: #E1624F;
@@ -36,6 +40,7 @@ body {
   margin-bottom: 8px;
 }
 
+/* ESTILOS DE TODAS AS IMAGENS*/
 img {
   max-width: 100%;
   height: auto;
@@ -43,10 +48,12 @@ img {
   display: block;
 }
 
+/* RESET DA TAG FIGURE: Remove os espaçamentos automáticos que o navegador coloca ao redor de imagens com legenda */
 figure {
   margin: 0;
 }
 
+/* ESTILOS DA LEGENDA DA PRIMEIRA FOTO*/
 figcaption {
   text-align: center;
   font-style: italic;
@@ -55,9 +62,10 @@ figcaption {
   margin-top: 24px;
   line-height: 1.2;
   padding-bottom: 30px;
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9; /* ESTILOS DA LINE ABAIXO DA LEGENDA*/
 }
 
+/* ESTILOS DO TITULO "CONHECA BUSAN"*/
 h1 {
   font-size: 36px;
   color: #1B1B1B;
@@ -66,6 +74,7 @@ h1 {
   margin-top: 6px;
 }
 
+/* ESTILOS DO SUBSTITULO "PARA OS AMANTES DE HISTORIA"*/
 .subtitulo2 {
   display: block;
   color: #E1624F;
@@ -77,6 +86,7 @@ h1 {
   margin-top: 44px;
 }
 
+/* ESTILOS DO TITULO "DESCUBRA 3 DESTINOS"*/
 h2 {
   font-size: 32px;
   color: #1B1B1B;
@@ -85,14 +95,16 @@ h2 {
   margin-top: 6px;
 }
 
-p {
-  font-size: 14px;
+/* ESTILOS DO PARÁGRAFO "DESCUBRA 3 DESTINOS"*/
+.atracoes-de-busan {
+font-size: 14px;
   color: #333333;
-  line-height: auto;
+  line-height: normal;
   margin-bottom: 54px;
   margin-top: 8px;
 }
 
+/* ESTILOS DOS "3 TITULOS TEMPLO-TEMPLO-PARQUE"*/
 h3 {
   font-size: 28px;
   color: #1B1B1B;
@@ -101,53 +113,82 @@ h3 {
   margin-top: 20px;
 }
 
-p2 {
+/* ESTILOS DO PARAGRAFO "1.TEMPLO HAEDONG YONGGUNGSA"*/
+.templo-haedong {
   font-size: 14px;
   color: #333333;
-  line-height: auto;
-  margin-bottom: 54px;
+  line-height: normal;
+  margin-bottom: 4px;
   margin-top: 8px;
 }
 
+/* ESTILOS DO PARAGRAFO "2.TEMPLO BEOMEO-SA"*/
+.templo-beomeo {
+  font-size: 14px;
+  color: #333333;
+  line-height: normal;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+/* ESTILOS DO PARAGRAFO "3.PARQUE YONGDUSAN"*/
+.parque-yongdusan {
+  font-size: 14px;
+  color: #333333;
+  line-height: normal;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+/* REFERENTE AOS ESTILOS DOS "BOM PARA:" */
 .titulo-caracteristica {
   font-weight: bold;
   font-size: 14px;
   color: #1B1B1B;
-  margin-bottom: 8px;
-  margin-top: 28px;
+  margin-bottom: 4px;
+  margin-top: 20px;
 }
 
+/* PADRONIZACAO DE TODAS ul (TOPICOS)*/
+/* NESTE CASO OS DOIS TOPICOS HISTORIA DO 1.TEMPLO HAEDONG E 2. TEMPLO BEOMEO POIS AMBOS SAO IGUAIS*/
 ul {
   padding-left: 20px;
   color: #0C51A7;
 }
 
+/* PADRONIZACAO DE TODAS ul li (TOPICOS)*/
+/* NESTE CASO OS TRES TOPICOS DO 1.TEMPLO HAEDONG E 2. TEMPLO BEOMEO E 3. PARQUE YONGDUSAN*/
 ul li {
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 40px;
 }
 
+/* PERSONALIZACAO DOS 3 TOPICOS DO PARQUE YONGDUSAN QUE SAO DE CORES DIFERENTES DOS ANTERIORES */
 .lista-colorida li {
   margin-bottom: 2px;
   line-height: 150%;
 }
 
+/* Essa regra foi usada para dizer ao navegador: "Aplique uma margem de 2px embaixo de todos os itens (<li>) da lista colorida, exceto no último (o item Lazer), que deve ter a margem igual a 0". */
 .lista-colorida li:last-child {
   margin-bottom: 0;
 }
 
+/* PERSONALIZACAO DOS 3 TOPICOS DO PARQUE YONGDUSAN QUE SAO DE CORES DIFERENTES DOS ANTERIORES */
 .tag-casais { color: #591B98; }
 .tag-familias { color: #E5245E; }
 .tag-lazer { color: #E95E10; }
 
+/* LINE DE RODAPE */
 .linha-final {
   border: 0;
   border-top: 1px solid #D9D9D9; 
-  margin-top: 38px;
-  margin-bottom: 38px;
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
 
+/* TEXTO FINAL DO RODAPE */
 .texto-conclusao {
   text-align: center;
   font-size: 12px;
@@ -156,6 +197,7 @@ ul li {
   margin-bottom: 54px;
 }
 
+/* TEXTO RODAPE "FEITO PELA ROCKETSEAT" */
 .rodape {
   text-align: center;
   font-size: 12px;
